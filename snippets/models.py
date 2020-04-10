@@ -14,7 +14,7 @@ class Snippet(models.Model):
     language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
     style = models.CharField(choices=STYLE_CHOICES, default='friendly', max_length=100)
 
-    objects = models.Manager()
+    objects = models.Manager() # because of vscode problem in handling models.objects
 
     class Meta:
         ordering = ['created']
